@@ -7,11 +7,20 @@ let i = 0,a=0,b=0,c=0;
 $('document').ready(function(){
 
   
-      if (window.matchMedia("(max-width: 769px)").matches) {
+  $(window).resize(function(){
+    
+    if (window.matchMedia("(max-width: 769px)").matches) {
       $(".afterWithScrolling").css('display','none')
+  
+      
     } else {
       $(".afterWithScrolling").css('display','block')
+     
+     
     }
+
+  })
+
 
 
       let typed = new Typed('#typed', {
